@@ -6,9 +6,10 @@
                 <p class="card-text">{{item.description}}</p>
                 <a href="#" class="btn btn-primary">Buy Tickets...</a>
             </div>
+            <div class="card-footer text-muted">
+                {{item.date | date : "shortDate"}}
+            </div>
         </div>
-        <div class="card-footer text-muted">
-            {{item.date | date : "shortDate"}}
-        </div>
+        <hr>
     </div>
 </div>
