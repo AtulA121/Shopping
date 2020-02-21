@@ -9,8 +9,7 @@ export class TokenInterceptorService implements HttpInterceptor {
 
   constructor(private _injector : Injector) { }
 
-  intercept(req, next)
-  {
+  intercept(req, next){
     let authService=this._injector.get(AuthService);
     let tokenizedRequest=req.clone({
       setHeaders : {
@@ -19,5 +18,4 @@ export class TokenInterceptorService implements HttpInterceptor {
     });
     return next.handle(tokenizedRequest);
   }
-
 }

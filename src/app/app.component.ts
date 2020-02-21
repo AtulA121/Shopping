@@ -8,5 +8,11 @@ import { AuthService } from './auth.service';
 })
 export class AppComponent {
   title = 'Shopping';
-  constructor(private _authService : AuthService){}
+  constructor(public _authService : AuthService){}
+
+  onActivate(event){
+    console.log("------------------- : ",event);
+    // alert(event);
+  }
+
 }
